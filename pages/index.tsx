@@ -1,10 +1,13 @@
-import { Container } from '../components/core/Container'
-import Footer from '../components/app/Footer'
+import { Container } from '../components/core/container'
+import Content from '../components/core/content'
+import Footer from '../components/app/footer'
 import Head from 'next/head'
-import Header from '../components/app/Header'
+import Header from '../components/app/header'
 import Image from 'next/image'
+import Layout from '../components/layout'
 import type { NextPage } from 'next'
-import { Todo } from '../components/core/Todo'
+import { NextPageWithLayout } from './_app'
+import { Todo } from '../components/core/todo'
 import styles from '../styles/Home.module.css'
 
 const generateTodos = () => {
@@ -16,21 +19,21 @@ const generateTodos = () => {
   return todos
 }
 
-const Home: NextPage = () => {
+const Page: NextPageWithLayout = () => {
   return (
-    <Container className="w-screen h-screen theme-bg-base theme-color-base">
-      <Header></Header>
-
-      <div className="flex w-full h-full">
-        <Container className="w-full h-full bg-base color-base">{generateTodos()}</Container>
-
-        <Container className="w-full h-full bg-base color-base">{generateTodos()}</Container>
-
-        <Container className="w-full h-full bg-base color-base">{generateTodos()}</Container>
-      </div>
-      <Footer></Footer>
-    </Container>
+    <Content>
+      <Container className="w-full h-full bg-base color-base">{generateTodos()}</Container>
+      <Container className="w-full h-full bg-base color-base">{generateTodos()}</Container>
+      <Container className="w-full h-full bg-base color-base">{generateTodos()}</Container>
+    </Content>
+  )
+}
+Page.getLayout = (page: React.ReactNode) => {
+  return (
+    <Layout>
+      {page}
+    </Layout>
   )
 }
 
-export default Home
+export default Page

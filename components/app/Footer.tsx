@@ -1,4 +1,4 @@
-import { Todo } from "../core/Todo"
+import { Todo } from "../core/todo"
 
 export default function Footer() {
   return <footer className="flex p-2">
