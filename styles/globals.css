@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply text-white bg-gray-800;
+}
+
+.theme-bg-base {
+  @apply bg-slate-800;
+}
+
+.theme-color-base {
+  @apply text-slate-300;
+}
+
+/* core colors */
+.bg-base {
+  @apply bg-gray-100;
+}
+
+.dark .bg-base {
+  @apply bg-gray-800;
+}
+
+.bg-shade {
+  @apply bg-gray-200/70;
+}
+
+.dark .bg-shade {
+  @apply dark:bg-gray-500/10;
+}
+
+.bg-highlight {
+  @apply bg-gray-100;
+}
+
+.dark .bg-highlight {
+  @apply bg-gray-600/50;
+}
+
+.bg-accent {
+  @apply bg-red-50;
+}
+
+.dark .bg-accent {
+  @apply dark:bg-red-200;
+}
+
+.color-base {
+  @apply text-gray-900;
+}
+
+.dark .color-base {
+  @apply dark:text-gray-300;
+}
+
+.color-fade {
+  @apply text-gray-900/50;
+}
+
+.dark .color-fade {
+  @apply dark:text-gray-300/50;
+}
+
+.color-accent {
+  @apply text-white;
+}
+
+.dark .color-accent {
+  @apply dark:text-gray-100;
+}
+
+.border-base {
+  @apply border-gray-300;
+}
+
+.dark .border-base {
+  @apply dark:border-red-300;
+}
+
+.border-highlight {
+  @apply border-gray-200/50;
+}
+
+.dark .border-highlight {
+  @apply dark:border-gray-700/50;
+}
+
+.input-base {
+  @apply text-gray-900;
+}
+
+.dark .input-base {
+  @apply dark:text-sky-400;
+}
+
+/* core components  */
+.btn {
+  @apply inline-flex whitespace-nowrap items-center justify-center px-6 py-2 space-x-2 text-sm font-semibold text-center transition-colors duration-300 rounded-md;
+}
+
+.btn-base {
+  @apply bg-shade color-base border border-base bg-gray-100 hover:drop-shadow-sm;
+}
+
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
