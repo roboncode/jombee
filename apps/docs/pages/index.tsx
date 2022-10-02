@@ -1,4 +1,4 @@
-import { Button } from 'ui'
+import { Button } from '@jombee/react-ui'
 
 export default function Docs() {
   return (
