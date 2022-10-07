@@ -11,20 +11,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "^1.1.4",
-    "@unocss/astro": "^0.45.26",
-    "@unocss/reset": "^0.45.26",
-    "ahooks": "^3.7.1",
-    "astro": "^1.4.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
-  },
-  "devDependencies": {
-    "@iconify-json/tabler": "^1.1.37",
-    "@types/react": "^18.0.21",
-    "@unocss/preset-icons": "^0.45.26",
-    "@unocss/preset-uno": "^0.45.26",
-    "unocss": "^0.45.26",
-    "vite": "^3.1.0"
+    "astro": "^1.4.5"
   }
 }

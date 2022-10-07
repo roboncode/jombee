@@ -7,9 +7,14 @@ export const ToggleDarkModeButton = () => {
   })
 
   useEffect(() => {
-    const htmlEl = document.getElementsByTagName('html')[0]
-    if(isDark) htmlEl.classList.add('dark')
-    else htmlEl.classList.remove('dark')
+    const bodyEl = document.body
+    if(isDark) {
+      bodyEl.classList.add('dark')
+      bodyEl.classList.add('sl-theme-dark')
+    } else {
+      bodyEl.classList.remove('dark')
+      bodyEl.classList.remove('sl-theme-dark')
+    }
   }, [isDark])
 
   return (

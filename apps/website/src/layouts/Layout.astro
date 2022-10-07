@@ -1,84 +1,35 @@
 ---
-import Container from '../components/Container.astro'
-import { ToggleDarkModeButton } from '../components/ToggleDarkModeButton'
-
 export interface Props {
-  title: string
+	title: string;
 }
 
-const { title } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body class="bg-base color-base">
-    <Container className="w-screen h-screen bg-base color-base">
-      <div class="h-row p-4 bg-shade">
-        <a href="/">
-          <span class="i-tabler-messages text-2xl"></span>
-          <span class="font-bold">jombee</span>
-        </a>
-        <div class="flex-grow"></div>
-        <ToggleDarkModeButton client:idle />
-      </div>
-      <div class="flex w-full h-full bg-base color-base">
-        <Container className="!hidden md:!flex w-full h-full max-w-80 border-r border-base">
-          <div class="p-4 space-y-2">
-            <a href="#" class="block p-2 px-4 rounded hover:bg-shade">Home</a>
-            <a href="#" class="block p-2 px-4 rounded hover:bg-shade">Home</a>
-          </div>
-        </Container>
-        <Container className="w-full h-full">
-          <div class="p-8">
-            <slot />
-          </div>
-        </Container>
-      </div>
-      <!-- <div class="p-4 bg-red-500">This is a footer</div> -->
-    </Container>
-
-    <script is:inline>
-      const theme = (() => {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-          return localStorage.getItem('theme')
-        }
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          return 'dark'
-        }
-        return 'light'
-      })()
-
-      if (theme === '"light"' || theme === 'light') {
-        document.documentElement.classList.remove('dark')
-        window.localStorage.setItem('theme', `"light"`)
-      } else {
-        document.documentElement.classList.add('dark')
-        window.localStorage.setItem('theme', `"dark"`)
-      }
-    </script>
-    <style is:global>
-      :root {
-        --accent: 124, 58, 237;
-        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-        /* display: flex; */
-        /* width: 100vh;
-    height: 100vh; */
-      }
-      html {
-        font-family: system-ui, sans-serif;
-        /* background-color: #f6f6f6; */
-      }
-      code {
-        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
-          Courier New, monospace;
-      }
-    </style>
-  </body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
 </html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+	}
+	html {
+		font-family: system-ui, sans-serif;
+		background-color: #F6F6F6;
+	}
+	code {
+		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+</style>

@@ -66,6 +66,7 @@ export default defineConfig({
         'input-base': 'text-gray-900 dark:text-light-blue-400',
         // core components colors
         'textinput': 'w-full px-3 py-2 bg-base border border-base rounded-md disabled:bg-gray-50 disabled:text-gray-400 dark:placeholder:text-gray-600',
+        'form-label': 'pl-1 pt-1 text-sm font-medium',
         "btn": 'inline-flex whitespace-nowrap items-center justify-center px-6 py-2 space-x-2 text-sm font-semibold text-center transition-colors duration-300 rounded-md',
         "btn-base": 'bg-shade color-base border border-base bg-gray-100 hover:bg-highlight hover:drop-shadow-sm',
         "btn-primary": 'bg-light-blue-700 hover:bg-light-blue-600 text-white',
@@ -86,7 +87,7 @@ export default defineConfig({
         "menu-item-active": "text-primary !bg-blue-50 rounded-r     -full",
         "snackbar-content": "flex items-center gap-1 px-5 py-3 bg-black rounded text-white text-sm font-bold drop-shadow-lg",
         "sidebar": "fixed top-18 bottom-0 w-100",
-        "card": "bg-white border-1 border-gray-200 md:rounded-lg overflow-hidden",
+        "card": "bg-base border border-base md:rounded-lg overflow-hidden",
         "card-content": "p-2 md:p-6",
         "card-header": "flex items-center gap-3 py-3 pl-8 pr-4 border-b border-gray-200 font-bold",
         "card-footer": "py-4 px-6 flex items-center border-t border-t-gray-200",

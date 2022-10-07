@@ -1,12 +1,8 @@
 // !!!! https://www.youtube.com/watch?v=x9yUwiNtzBs
 
-import '@jombee/solid-ui'
-import '@jombee/lit-ui'
-import '@jombee/svelte-ui'
-
 import { SlButton, SlDivider, SlDropdown, SlIcon, SlMenu, SlMenuItem } from '@shoelace-style/shoelace/dist/react'
 
-import { Container } from '../components/core/Container'
+import { Container } from '../../../../packages/react-ui/components/Container'
 import { useState } from 'react'
 
 function Test() {
@@ -20,27 +16,15 @@ function Test() {
   }
 
   return (
-    <div className="dark">
-      <div className="sl-theme-dark w-screen h-screen bg-base color-base p-8">
-        <h1>Test Page</h1>
+    <div>
+      <div className="w-screen h-screen bg-base color-base p-8">
+        <h1>Test Page1</h1>
         {/* <div>
           Raw: <MyElement />
         </div> */}
         <SlButton onClick={() => setName('Rob')}>Change name: Rob</SlButton>
 
-        <div className="border border-base rounded-lg p-4 m-4">
-          <lit-counter name={name} class="block font-bold p-4 bg-shade rounded-md" />
-        </div>
-
-        <div className="border border-base rounded-lg p-4 m-4">
-          <solid-counter name={name} class="block font-bold p-4 bg-shade rounded-md" />
-        </div>
-
-        <div className="border border-base rounded-lg p-4 m-4">
-          <svelte-counter name={name} class="block font-bold p-4 bg-shade rounded-md" />
-        </div>
-
-        <Container className="w-100 h-50 bg-shade p-4 rounded-lg overflow-y-auto">
+        <Container className="w-100 h-50 bg-shade rounded-lg" contentClass="p-4">
           <SlDropdown className="sticky top-0" hoist>
             <SlButton slot="trigger" caret>
               {selectedItem}

@@ -1,10 +1,9 @@
 import '@shoelace-style/shoelace/dist/themes/light.css'
 
-import { CodeViewer } from '../components/CodeViewer'
-import { Container } from '../components/core/Container'
+import { Container, ToggleDarkModeButton } from '@jombee/react-ui'
+
 import { Hello } from '../components/Hello'
-import { SlSwitch } from '@shoelace-style/shoelace/dist/react'
-import { ToggleDarkModeButton } from '../components/core/ToggleDarkModeButton'
+import { Outlet } from 'react-router-dom'
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path'
 import { useState } from 'react'
 
@@ -25,15 +24,16 @@ function Home() {
   useExample()
 
   return (
-    <Container className="w-screen h-screen theme-bg-base theme-color-base">
+    <Container className="w-screen h-screen bg-base color-base">
       <div className="h-row p-2">
         <span className="i-tabler-brand-prisma text-lg"></span>
-        <span className="font-bold">Spectrum - Tools for Prisma</span>
+        <span className="font-bold">React App Template</span>
         <div className="flex-grow"></div>
         <ToggleDarkModeButton />
       </div>
       <div className="flex w-full h-full">
-        <Container className="w-full h-full bg-base color-base">
+        <Outlet />
+        {/* <Container className="w-full h-full bg-base color-base">
           <div className="sticky top-0 p-4 h-row bg-base drop-shadow-md">
             Header <span className="i-tabler-box"></span>
             <SlSwitch checked={isChecked} onSlChange={(evt: any) => setCheck(evt.currentTarget.checked)}>
@@ -41,16 +41,13 @@ function Home() {
             </SlSwitch>
             <div>isChecked: {isChecked.toString()}</div>
           </div>
-
-          <CodeViewer editable={true} content={prismaContent} />
-          {/* <pre className='text-xs'>{prismaContent}</pre> */}
         </Container>
         <Container className="w-full h-full bg-base color-base">
           <div className="sticky top-0 h-row p-4 bg-base drop-shadow-md">
             Header <span className="i-tabler-box"></span>
           </div>
           {hellos}
-        </Container>
+        </Container> */}
       </div>
       <div className="p-2">This is a footer</div>
     </Container>
