@@ -3,3 +3,4 @@
 export * from './components/Container'
 export * from './components/ToggleButton'
 export * from './components/ToggleDarkModeButton'
+export * from './components/Tooltip'
