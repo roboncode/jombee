@@ -17,6 +17,8 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "ahooks": "^3.7.1"
+    "@radix-ui/react-tooltip": "^1.0.0",
+    "ahooks": "^3.7.1",
+    "react-dom": "^18.2.0"
   }
 }

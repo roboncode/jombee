@@ -12,6 +12,7 @@
     "@formkit/auto-animate": "1.0.0-beta.3",
     "@jombee/react-ui": "workspace:*",
     "@lit-labs/react": "^1.0.9",
+    "@radix-ui/react-tooltip": "^1.0.0",
     "@shoelace-style/shoelace": "2.0.0-beta.83",
     "@unocss/reset": "^0.45.26",
     "ahooks": "^3.7.1",

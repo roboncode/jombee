@@ -6,7 +6,7 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 import { Suspense, lazy, useState } from 'react'
 
 import Anime from './pages/anime'
-import ApplicationLayout from './layouts/ApplicationLayout'
+import ApplicationLayout from './layouts/AppLayout'
 import Child from './pages/child'
 import DefaultLayout from './layouts/DefaultLayout'
 import { Hello } from './components/Hello'
@@ -28,20 +28,16 @@ function App() {
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          
-          {/* Default */}
-          <Route path="/" element={<DefaultLayout />}>
-            <Route path="/signin" element={<Signin />} />
-            <Route path="/signup" element={<Signup />} />
+          <Route path="/" element={<ApplicationLayout />}>
             <Route path="" element={<About />}>
               <Route path=":id" element={<Child />} />
             </Route>
-          </Route>
-
-          {/* Application */}
-          <Route path="/" element={<ApplicationLayout />}>
             <Route path="test" element={<Test />} />
             <Route path="anime" element={<Anime />} />
+          </Route>
+          <Route path="/" element={<DefaultLayout />}>
+            <Route path="/signin" element={<Signin />} />
+            <Route path="/signup" element={<Signup />} />
           </Route>
         </Routes>
       </Suspense>

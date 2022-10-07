@@ -108,6 +108,7 @@ export default defineConfig({
         "titlebar": "flex items-center flex-grow-0 w-full p-2 border-b border-base font-bold",
         "snackbar": "bg-black text-white font-medium px-6 py-4 sm:rounded sm:text-sm sm:font-medium sm:px-6 sm:py-4",
         "subtitlebar": "flex items-center flex-grow-0 w-full px-4 h-10 min-h-10 text-xs font-bold uppercase",
+        "tooltip": "text-sm font-semibold px-3 py-2 bg-black text-white rounded-md",
       },
       transformers: [
         transformerDirective(),
